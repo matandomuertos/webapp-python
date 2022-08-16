@@ -24,6 +24,10 @@ The helm chart is released to [ghcr.io](ghcr.io) automatically by [Github action
 3. Deploy to k8s `helm install webapp webapp-python/helm`
 If you want to customize the deployment, please check the [values file](./charts/webapp/values.yaml).
 
+#### Optional
+- Test helm deployment: `helm test webapp`
+- Uninstall deployment: `helm uninstall webapp`
+
 ## Docker image build
 The Docker image is build and pushed to [ghcr.io](ghcr.io) automatically by [Github actions](https://github.com/matandomuertos/webapp-python/actions). 
 
