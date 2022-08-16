@@ -1,0 +1,32 @@
+name: Docker image build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  push_to_registry:
+    name: Build Docker image and push it to ghcr.io
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+    - name: Check out the repo 
+      uses: actions/checkout@v3
+
+    - name: Log in to the Container registry
+      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and push
+      uses: docker/build-push-action@v3
+      with:
+        file: app/Dockerfile
+        context: ./app
+        push: true
+        tags: ghcr.io/${{ github.repository }}
