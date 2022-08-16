@@ -3,6 +3,16 @@ entries:
   helm:
   - apiVersion: v2
     appVersion: 0.0.2
+    created: "2022-08-16T22:19:13.220198732Z"
+    description: Basic Python web app
+    digest: f70b67ae3586cf20ccb4b3263c731064193dc7125e1789c80edc83a0fcc391ea
+    name: helm
+    type: application
+    urls:
+    - https://github.com/matandomuertos/webapp-python/releases/download/helm-0.0.3/helm-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 0.0.2
     created: "2022-08-16T22:01:15.810362483Z"
     description: Basic Python web app
     digest: 418a478a0684ab0671544f333fa08d4dcbc786cc719bad4edc6d600e9e9a66fd
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/matandomuertos/webapp-python/releases/download/helm-0.0.2/helm-0.0.2.tgz
     version: 0.0.2
-generated: "2022-08-16T22:01:15.810368783Z"
+generated: "2022-08-16T22:19:13.220211232Z"
